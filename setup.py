@@ -58,7 +58,7 @@ with open("README.md", "r", encoding='utf-8') as fh:
 cuda_home = _find_cuda_home()
 cc_args = []
 cl_args = []
-libraries = ["cuda"]
+libraries = ['cuda']
 library_paths = []
 if platform.system() == 'Windows':
     cc_args += ['/DEBUG', '/Z7', '/std:c++17']
@@ -74,7 +74,7 @@ else:
         # Note that it's also possible both don't exist (see
         # _find_cuda_home) - in that case we stay with 'lib64'.
         lib_dir = 'lib'
-    library_paths += [os.path.join(cuda_home, lib_dir)]
+    library_paths += [os.path.join(cuda_home, lib_dir, "stubs")]
 
 
 class build_ext_subclass(build_ext):
