@@ -23,6 +23,7 @@ jobs:
           CIBW_BEFORE_ALL_WINDOWS: bash ci/setup_windows.sh
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
           CIBW_SKIP: pp* *-musllinux_*
+          CIBW_ENVIRONMENT_LINUX: LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/usr/local/cuda/lib64/stubs
           # CIBW_ENVIRONMENT_MACOS: CC='clang' CXX='clang++'
 
       - uses: actions/upload-artifact@v3
