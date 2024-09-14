@@ -79,7 +79,7 @@ inline bool ensure_initialize_context()
     if (!omodule)
     {
         moduleCompileOptions.maxRegisterCount = 50;
-        moduleCompileOptions.optLevel = OPTIX_COMPILE_OPTIMIZATION_LEVEL_0;
+        moduleCompileOptions.optLevel = OPTIX_COMPILE_OPTIMIZATION_DEFAULT;
         moduleCompileOptions.debugLevel = OPTIX_COMPILE_DEBUG_LEVEL_NONE;
 
         pipelineCompileOptions = {};
