@@ -25,7 +25,7 @@ jobs:
           CIBW_BUILD_VERBOSITY: 1
           CIBW_BUILD: cp38-*
           # CIBW_ENVIRONMENT_MACOS: CC='clang' CXX='clang++'
-      - uses: actions/upload-artifact@v2
+      - uses: actions/upload-artifact@v4
         with:
           path: ./wheelhouse/*.whl
   run:
