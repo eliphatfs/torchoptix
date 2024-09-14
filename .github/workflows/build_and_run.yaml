@@ -11,6 +11,7 @@ jobs:
     steps:
       - name: Maximize build space
         uses: easimon/maximize-build-space@master
+        if: matrix.os == 'ubuntu-latest'
         with:
           root-reserve-mb: 512
           swap-size-mb: 1024
