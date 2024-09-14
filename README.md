@@ -27,6 +27,8 @@ Stable release (Windows or Linux 64-bit):
 pip install torchoptix
 ```
 
+The wheel contains prebuilt binaries, and you do not need CUDA development toolkit to run the code.
+
 Development (or if you are not using a common system supported by prebuilt binaries):
 
 ```bash
