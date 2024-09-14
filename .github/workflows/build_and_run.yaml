@@ -21,6 +21,8 @@ jobs:
           CIBW_BEFORE_ALL_LINUX: bash ci/setup_manylinux.sh
           # CIBW_BEFORE_ALL_MACOS: python/tools/prepare_build_environment_macos.sh
           CIBW_BEFORE_ALL_WINDOWS: bash ci/setup_windows.sh
+          CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
+          CIBW_SKIP: pp* *-musllinux_*
           # CIBW_ENVIRONMENT_MACOS: CC='clang' CXX='clang++'
 
       - uses: actions/upload-artifact@v3
