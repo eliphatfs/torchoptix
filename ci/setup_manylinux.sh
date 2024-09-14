@@ -7,5 +7,5 @@ sed -i s/mirror.centos.org/vault.centos.org/g /etc/yum.repos.d/*.repo
 sed -i s/^#.*baseurl=http/baseurl=http/g /etc/yum.repos.d/*.repo
 sed -i s/^mirrorlist=http/#mirrorlist=http/g /etc/yum.repos.d/*.repo
 yum install --setopt=obsoletes=0 -y \
-    cuda-cudart-devel-11-8-11.8.89-1 \
+    cuda-driver-devel-11-8-11.8.89-1 \
     cuda-nvcc-11-8-11.8.89-1
