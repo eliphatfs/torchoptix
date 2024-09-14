@@ -9,6 +9,7 @@ Most requirements are the same as running OptiX.
 + **Hardware:** All NVIDIA GPUs of Compute Capability 5.0 (Maxwell) or higher are supported.
 + **Driver:** An driver version of R515+ is required. You may check with `nvidia-smi`.
 + **Python:** 3.8 or higher.
++ **PyTorch:** 2 or higher is recommended. May also work for older versions.
 
 ### Running in containers like Docker
 
@@ -16,7 +17,7 @@ To run inside a container, you need to configure the driver for OptiX. You can c
 
 1. Set `ENV NVIDIA_DRIVER_CAPABILITIES compute,utility,graphics` and `ENV PYOPENGL_PLATFORM egl` in `Dockerfile` when building the image.
 2. Set `-e NVIDIA_DRIVER_CAPABILITIES=graphics,compute,utility` when creating the container.
-3. Copy or mount `/usr/lib/x86_64-linux-gnu/libnvoptix.so.<version>` on the host or download a same version of the library to `/usr/lib/x86_64-linux-gnu/libnvoptix.so.1` in the container; copy `/usr/lib/x86_64-linux-gnu/libnvidia-rtcore.so.470.82.01` on the host or download a same version of the library to `/usr/lib/x86_64-linux-gnu/libnvidia-rtcore.so.470.82.01` in the container.
+3. Copy or mount `/usr/lib/x86_64-linux-gnu/libnvoptix.so.<version>` on the host or download a same version of the library to `/usr/lib/x86_64-linux-gnu/libnvoptix.so.1` in the container; copy `/usr/lib/x86_64-linux-gnu/libnvidia-rtcore.so.<version>` on the host or download a same version of the library to `/usr/lib/x86_64-linux-gnu/libnvidia-rtcore.so.<version>` in the container.
 
 ## Installation
 
