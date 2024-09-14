@@ -23,7 +23,7 @@ jobs:
           CIBW_BEFORE_ALL_WINDOWS: bash ci/setup_windows.sh
           CIBW_MANYLINUX_X86_64_IMAGE: manylinux2014
           CIBW_SKIP: pp* *-musllinux_*
-          CIBW_REPAIR_WHEEL_COMMAND_LINUX: 'pip install -U auditwheel && auditwheel repair -w {dest_dir} {wheel} --exclude libcuda.so.1'
+          CIBW_REPAIR_WHEEL_COMMAND_LINUX: 'pip install -U auditwheel patchelf && auditwheel repair -w {dest_dir} {wheel} --exclude libcuda.so.1'
           # CIBW_ENVIRONMENT_MACOS: CC='clang' CXX='clang++'
 
       - uses: actions/upload-artifact@v3
