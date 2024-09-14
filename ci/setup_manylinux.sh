@@ -11,4 +11,4 @@ yum install --setopt=obsoletes=0 -y \
     cuda-cudart-devel-11-8-11.8.89-1 \
     cuda-nvcc-11-8-11.8.89-1
 touch /usr/local/cuda/lib64/libcuda.so.1
-chmox +x /usr/local/cuda/lib64/libcuda.so.1
+chmod +x /usr/local/cuda/lib64/libcuda.so.1
