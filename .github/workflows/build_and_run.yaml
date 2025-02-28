@@ -1,5 +1,7 @@
 name: Build and run tests
-on: [push]
+on:
+  - push
+  - workflow_dispatch
 jobs:
   build:
     name: Build wheels on ${{ matrix.os }}
